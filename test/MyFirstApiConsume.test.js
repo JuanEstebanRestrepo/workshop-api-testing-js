@@ -54,9 +54,8 @@ describe('First Api Tests', () => {
 
         const response = await agent.head('https://httpbin.org/get')
             .query({ email: 'joe@smith.com' });
-            
+
         console.log('Status code: ' + response.statusCode);
-        console.log(response);
       
         expect(response.status).to.equal(statusCode.OK);
         expect(response.header).to.have.property('connection');
