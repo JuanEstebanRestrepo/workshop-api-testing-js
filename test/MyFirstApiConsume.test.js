@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const agent = require('superagent');
 const statusCode = require('http-status-codes');
 const chai = require('chai');
@@ -74,5 +76,15 @@ describe('First Api Tests', () => {
 
     expect(response.status).to.equal(statusCode.OK);
     expect(response.body).to.have.property('data');
+  });
+
+  it('Via OAuth2 Tokens by parameter', () => {
+    agent.get(`${'https://github.com'}/${process.env.GITHUB_USER_NAME}/${'workshop-api-testing-js'}`)
+      .query(`access_token=${process.env.ACCESS_TOKEN}`)
+      .set('User-Agent', 'agent')
+      .then((response) => {
+        expect(response.status).to.equal(statusCode.OK);
+        expect(response.body.description).equal('This is a Workshop about Api Testing in JavaScript');
+      });
   });
 });
