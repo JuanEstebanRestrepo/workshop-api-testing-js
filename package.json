@@ -34,9 +34,11 @@
     "mochawesome": "^7.0.1"
   },
   "dependencies": {
+    "chai-json-schema": "^1.5.1",
     "md5": "^2.3.0",
     "nodegit": "^0.27.0",
     "superagent": "^6.1.0",
-    "superagent-promise": "^1.1.0"
+    "superagent-promise": "^1.1.0",
+    "superagent-response-time": "^1.0.3"
   }
 }
