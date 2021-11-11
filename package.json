@@ -24,6 +24,7 @@
   "homepage": "https://github.com/JuanEstebanRestrepo/workshop-api-testing-js#readme",
   "devDependencies": {
     "chai": "^4.3.4",
+    "chai-subset": "^1.6.0",
     "dotenv": "^10.0.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -33,6 +34,8 @@
     "mochawesome": "^7.0.1"
   },
   "dependencies": {
+    "md5": "^2.3.0",
+    "nodegit": "^0.27.0",
     "superagent": "^6.1.0",
     "superagent-promise": "^1.1.0"
   }
